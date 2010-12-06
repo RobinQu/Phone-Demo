@@ -1,34 +1,14 @@
 /*global Ext, phone */
 
-phone.views.OverlayForm = Ext.extend(Ext.Sheet, {
-    modal: true,
+phone.views.OverlayForm = Ext.extend(Ext.Panel, {
     fullscreen: true,
     cls: 'overlay-form',
-    enter: 'left',
-    exit: 'right',
-    stretchX: true,
-    stretchY: true,
+    scroll: "vertical",
     initComponent: function() {
-        var items = {
+        var cfg = {
             items: {
-                xtype: "contactform",
-                actionsBar: {
-                    margin: 10,
-                    defaults: {
-                      margin: 5,
-                      flex: 1  
-                    },
-                    layout: {
-                        type: "hbox",
-                        pack: 'center',
-                        align: 'stretch'
-                    },
-                    items: this.actionsBar
-                }
-                    
-            }
-        };
-        Ext.apply(this, {
+                xtype: this.mainView
+            },
             dockedItems: {
                 xtype: "toolbar",
                 dock: "top",
@@ -37,15 +17,14 @@ phone.views.OverlayForm = Ext.extend(Ext.Sheet, {
                 {
                     ui: 'back',
                     text: "Back",
-                    scope: this,
-                    handler: function(btn, e) {
-                        this.hide();
-                    }
-                }
+                    scope: phone.controllers.contacts,
+                    handler: phone.controllers.contacts.hideOverlay
+                },{ xtype: "spacer"},
+                this.actionBtn
                 ]
-            },
-            items: items
-        });
+            }
+        };
+        Ext.apply(this, cfg);
         phone.views.OverlayForm.superclass.initComponent.apply(this, arguments);
 
 

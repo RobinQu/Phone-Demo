@@ -29,6 +29,14 @@ phone.Viewport = Ext.extend(Ext.TabPanel, {
                 title: "DialPad",
                 html: "this is dialpad",
                 iconCls: 'info'
+            },{
+                title: "Favorites",
+                html: "fav",
+                iconCls: "favorites"
+            },{
+                title: "Log",
+                html: "log",
+                iconCls: "bookmarks"
             }]
         });
         phone.Viewport.superclass.initComponent.apply(this, arguments);

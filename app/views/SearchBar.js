@@ -1,5 +1,5 @@
 /*global phone, Ext */
-phone.views.SearchBar = Ext.extend(Ext.Toolbar, {
+phone.views.SearchBar = Ext.extend(Ext.Panel, {
     cls: "searchbar",
     initComponent: function() {
         this.addEvents(
@@ -14,6 +14,7 @@ phone.views.SearchBar = Ext.extend(Ext.Toolbar, {
         this.enableBubble('filter');
 
         Ext.apply(this, {
+            width: 130,
             layout: {
                 type: 'vbox',
                 align: 'stretch',

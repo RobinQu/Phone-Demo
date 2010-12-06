@@ -10,24 +10,36 @@
  Ext.regModel('Contact', {
      fields: [
      {
-         name: 'firstName',
+         name: 'name',
          type: 'string'
      },
      {
-         name: 'lastName',
+       name: "sign",
+       type: "string"  
+     },
+     {
+         name: 'avatar',
+         type: 'string',
+         defaultValue: "image/avatar.png"
+     },
+     {
+         name: 'cellphone',
          type: 'string'
      },
      {
-         name: 'mobileNum',
+         name: 'ring',
          type: 'string'
      },
      {
-         name: 'telNum',
-         type: 'string'
+       name: 'birth',
+       type: 'date',
+       dateFormat: 'Y-m-d'
      },
      {
-         name: 'eMail',
-         type: 'string'
-     }]
+       name: 'address',
+       type: "string"
+     },
+        "iaccount"
+     ]
      // fields
  });

@@ -2,88 +2,71 @@
 
 Ext.regController("contacts", {
     addContact: function() {
-        var view = this.composeView,
-        form;
+        var view = this.contactBuilder,
+            box = this.box,
+            form, fieldset;
         if (!view) {
-            this.composeView = this.render({
-                xtype: "overlayform",
-                id: "compose-overlay",
-                title: "Add Contact",
-                actionsBar: {
-                    xtype: "button",
-                    text: "Save",
-                    scope: phone.controllers.contact,
-                    handler: phone.controllers.contact.save
-                }
-            },
-            false);
-            view = this.composeView;
+            this.box = Ext.getCmp("contacts-box");
+            this.contactBuilder = Ext.getCmp("contact-builder");
+            view = this.contactBuilder;
+            box = this.box;
         }
-
-        form = view.form;
-        if (!form) {
-            form = view.down("contactform");
-            view.form = form;
-        }
-        form.reset();
-        form.enable();
-        view.show();
+        
+        view.down("contactbuilder").reset();
+        
+        box.setActiveItem(3, {
+            type: "slide",
+            direction: "left"
+        });
     },
     deleteContact: function() {
         Ext.Msg.confirm(
-            "Confirm",
-            "Are you sure to delete contact?",
-            function(status) {
-                if(status==="yes") {
-                    Ext.dispatch({
-                       controller: "contact",
-                       action: "remove" 
-                    });
-                }
+        "Confirm",
+        "Are you sure to delete contact?",
+        function(status) {
+            if (status === "yes") {
+                Ext.dispatch({
+                    controller: "contact",
+                    action: "remove"
+                });
             }
+        }
         );
     },
     showContact: function(sm, rec) {
-        var view = this.detailView;
+        var box = this.box,
+        view = this.detailView;
         if (!view) {
-            this.detailView = this.render({
-                xtype: "overlayform",
-                id: "detail-overlay",
-                title: "Contact Info",
-                actionsBar: [{
-                    xtype: "button",
-                    text: "Edit",
-                    ui: "round",
-                    hasDisabled: true,
-                    scope: phone.controllers.contact,
-                    handler: phone.controllers.contact.onAction
-                },
-                {
-                    xtype: "button",
-                    text: "Delete",
-                    ui: "decline-round",
-                    scope: phone.controllers.contacts,
-                    handler: phone.controllers.contacts.deleteContact
-                }],
-                listeners: {
-                    scope: this,
-                    hide: function() {
-                        view.down("button").setText("Edit");
-                        view.down("contactform").disable();
-                        sm.deselectAll();
-                    }
-                }
-            },
-            false);
+            this.box = Ext.getCmp("contacts-box");
+            this.detailView = Ext.getCmp("detail-overlay");
+            box = this.box;
             view = this.detailView;
         }
-
-        view.down("contactform").load(rec);
-        view.show();
+        this._selectedModel = sm;
+        //view.down("contactform").load(rec);
+        view.down("contactdetail").setContact(rec);
+        box.setActiveItem(1, {
+            type: "slide",
+            direction: "left"
+        });
+    },
+    hideOverlay: function() {
+        var edit = this.box.down("#detail-overlay button[text='Save']");
+        if(edit) {
+            edit.setText("Edit");
+            this.box.down("contactform").disable();
+        }
+        if(this._selectedModel) {
+            this._selectedModel.deselectAll();
+        }
+        
+        this.box.setActiveItem(0, {
+            type: "slide",
+            direction: "right"
+        });
     },
     onSelected: function(selectionModel, records) {
         var rec = records[0];
-
         if (rec) {
             this.showContact(selectionModel, rec);
         }

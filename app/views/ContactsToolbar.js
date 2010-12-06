@@ -3,7 +3,11 @@ phone.views.ContactsToolbar = Ext.extend(Ext.Toolbar, {
     dock: 'top',
     title: 'Contacts List',
     cls: "contacts-toolbar",
-    items: [{xtype: "spacer"}, {
+    items: [{xtype: "spacer"}, 
+        {
+          xtype: "searchbar"
+        },
+        {
         xtype: "button",
         text: "Add",
         scope: phone.controllers.contacts,
