@@ -1,8 +1,70 @@
-/* .x-toolbar-title {
-    text-align: left;
-    left: 10px;
-}
+/*
+Syntax error: Undefined mixin 'sencha-panel'.
+        on line 7 of sass/main.scss, in `sencha-panel'
+        from line 7 of sass/main.scss
 
-.overlay-form .x-toolbar-title {
-    left: 90px;
-} */
+2: $base-color: "#f2f4f5";
+3: $base-gradient: 'recessed';
+4: 
+5: @import 'sencha-touch/default/all';
+6: 
+7: @include sencha-panel;
+8: @include sencha-buttons;
+9: @include sencha-sheet;
+10: @include sencha-picker;
+11: @include sencha-tabs;
+12: @include sencha-toolbar;
+
+Backtrace:
+sass/main.scss:7:in `sencha-panel'
+sass/main.scss:7
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/mixin_node.rb:74:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/node.rb:305:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/node.rb:213:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/node.rb:326:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/node.rb:326:in `map'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/node.rb:326:in `perform_children'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/node.rb:317:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/root_node.rb:59:in `perform!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/node.rb:305:in `_perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/node.rb:213:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/root_node.rb:37:in `perform'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/tree/root_node.rb:29:in `render'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/plugin.rb:220:in `update_stylesheet'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/plugin.rb:85:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/plugin.rb:78:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/plugin.rb:78:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/plugin.rb:76:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/plugin.rb:76:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/plugin.rb:171:in `watch'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/path.rb:71:in `call'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/path.rb:71:in `run_callback'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/path.rb:54:in `callback_action'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/path.rb:34:in `update'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/state/directory.rb:32:in `modified'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/state/directory.rb:31:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/state/directory.rb:31:in `modified'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/state/directory.rb:16:in `refresh'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/backends/fsevents.rb:15:in `add_handler'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/backends/fsevents.rb:14:in `each'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/backends/fsevents.rb:14:in `add_handler'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/backends/rubycocoa/fsevents.rb:107:in `call'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/backends/rubycocoa/fsevents.rb:107:in `initialize'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/backends/fsevents.rb:27:in `call'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/backends/fsevents.rb:27:in `CFRunLoopRun'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/backends/fsevents.rb:27:in `run'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm/monitor.rb:24:in `run'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/vendor/fssm/lib/fssm.rb:17:in `monitor'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/sass/plugin.rb:164:in `watch'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/haml/exec.rb:457:in `watch_or_update'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/haml/exec.rb:360:in `process_result'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/haml/exec.rb:41:in `parse'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/../lib/haml/exec.rb:21:in `parse!'
+/Library/Ruby/Gems/1.8/gems/haml-3.0.24/bin/sass:8
+/usr/bin/sass:19:in `load'
+/usr/bin/sass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'sencha-panel'.\A         on line 7 of sass/main.scss, in `sencha-panel'\A         from line 7 of sass/main.scss\A \A 2: $base-color: \"#f2f4f5\";\A 3: $base-gradient: 'recessed';\A 4: \A 5: @import 'sencha-touch/default/all';\A 6: \A 7: @include sencha-panel;\A 8: @include sencha-buttons;\A 9: @include sencha-sheet;\A 10: @include sencha-picker;\A 11: @include sencha-tabs;\A 12: @include sencha-toolbar;"; }

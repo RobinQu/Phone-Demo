@@ -20,7 +20,7 @@
      {
          name: 'avatar',
          type: 'string',
-         defaultValue: "image/avatar.png"
+         defaultValue: "resources/image/avatar.png"
      },
      {
          name: 'cellphone',

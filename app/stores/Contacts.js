@@ -7,7 +7,7 @@ Ext.regStore("Contacts",{
     },
     data: [{
         "id": "1",
-        "avatar": "image/avatar.png",
+        "avatar": "resources/images/avatar.png",
         "sign" : "hello world",
         "name": "Xiao Ming",
         "cellphone": "18658812316",
