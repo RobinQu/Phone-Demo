@@ -2,6 +2,13 @@
 $base-color: #f2f4f5;
 $base-gradient: 'recessed';
 
+//toolbar
+
+@import 'contact-list';
+@import 'contact-edit';
+@import 'contact-detail';
+@import 'contact-add';
+
 @import 'sencha-touch/default/all';
 
 @include sencha-panel;
