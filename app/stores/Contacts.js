@@ -18,6 +18,47 @@ Ext.regStore("Contacts",{
         "renren" : "fuck",
         "birth": "1988-08-06",
         "address" : "杭州西湖 "
-    }
+    },    {
+            "id": "2",
+            "avatar": "resources/images/avatar.png",
+            "sign" : "hello world",
+            "name": "Li Lei",
+            "cellphone": "18658812316",
+            "ring": "2",
+            "email": "gbluefox617@gmial.com",
+            "wangwang" : "rfjdasf@ak.com",
+            "msn" : "fdjas@msn.com",
+            "renren" : "fuck",
+            "birth": "1988-08-06",
+            "address" : "杭州西湖 "
+        },
+        {
+                "id": "2",
+                "avatar": "resources/images/avatar.png",
+                "sign" : "hello world",
+                "name": "Li Ming",
+                "cellphone": "18658812316",
+                "ring": "2",
+                "email": "gbluefox617@gmial.com",
+                "wangwang" : "rfjdasf@ak.com",
+                "msn" : "fdjas@msn.com",
+                "renren" : "fuck",
+                "birth": "1988-08-06",
+                "address" : "杭州西湖 "
+            },
+        {
+                "id": "3",
+                "avatar": "resources/images/avatar.png",
+                "sign" : "hello world",
+                "name": "Han Meimei",
+                "cellphone": "18658812316",
+                "ring": "2",
+                "email": "gbluefox617@gmial.com",
+                "wangwang" : "rfjdasf@ak.com",
+                "msn" : "fdjas@msn.com",
+                "renren" : "fuck",
+                "birth": "1988-08-06",
+                "address" : "杭州西湖 "
+            }
     ]
 });
