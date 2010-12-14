@@ -1,0 +1,7 @@
+@mixin aliyun-contact-list {
+  body.x-desktop {
+    font-size: 30pt;
+  }
+}
+
+@include aliyun-contact-list;
