@@ -1,7 +1,8 @@
 // Let's start with the basics
 $include-toolbar-uis: false;
+$toolbar-spacing: .6em;
 $base-color: #f2f4f5;
-$base-gradient: 'recessed';
+$base-gradient: 'matte';
 
 @import 'sencha-touch/default/all';
 
@@ -25,5 +26,9 @@ $base-gradient: 'recessed';
 @import 'contact-detail';
 @import 'contact-add';
 
+//toolbar
+@include sencha-toolbar-ui('aliyun', #2d2d2d);
 
-@include sencha-toolbar-ui('aliyun', black);
+.x-toolbar-title {
+  text-align: left;
+}

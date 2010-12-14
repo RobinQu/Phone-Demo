@@ -3,6 +3,7 @@ phone.views.ContactsToolbar = Ext.extend(Ext.Toolbar, {
     dock: 'top',
     title: 'Contacts List',
     cls: "contacts-toolbar",
+    ui: "aliyun",
     items: [{xtype: "spacer"}, 
         {
           xtype: "searchbar"
