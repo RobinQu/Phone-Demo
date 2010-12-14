@@ -8,7 +8,7 @@ phone.views.ContactsList = Ext.extend(Ext.List, {
     cls: "contacts-list",
     grouped: true,
     indexBar: true,
-    itemTpl: '<div class="contact"><strong>{name}</strong></div>',
+    itemTpl: '<figure class="contact"><img src="{avatar}" /><figcaption><strong>{name}</strong><p>手机 {cellphone}</p></figcaption></figure>',
     store: "Contacts"
 });
 

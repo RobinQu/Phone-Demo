@@ -1,8 +1,7 @@
 // Let's start with the basics
+$include-toolbar-uis: false;
 $base-color: #f2f4f5;
 $base-gradient: 'recessed';
-
-//toolbar
 
 @import 'sencha-touch/default/all';
 
@@ -25,3 +24,6 @@ $base-gradient: 'recessed';
 @import 'contact-edit';
 @import 'contact-detail';
 @import 'contact-add';
+
+
+@include sencha-toolbar-ui('aliyun', black);
