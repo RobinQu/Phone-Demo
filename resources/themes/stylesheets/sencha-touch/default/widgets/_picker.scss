@@ -10,11 +10,11 @@ $include-picker-highlights: $include-highlights !default;
 $picker-bar-gradient: $base-gradient !default;
 
 @mixin sencha-picker {
-  
+
   .x-sheet.x-picker {
     padding: 0;
   }
-  
+
   .x-sheet.x-picker > .x-sheet-body {
     position: relative;
     background-color: #fff;
@@ -28,7 +28,7 @@ $picker-bar-gradient: $base-gradient !default;
         z-index: 1;
         @include insertion(100%, 30%, 0, 0);
       }
-      
+
       &:before {
         top: auto;
         @include border-bottom-radius($picker-sheet-radius);
@@ -52,7 +52,7 @@ $picker-bar-gradient: $base-gradient !default;
       -webkit-box-shadow: none;
     }
   }
-    
+
   .x-picker-mask {
     position: absolute;
     top: 0;
@@ -76,11 +76,11 @@ $picker-bar-gradient: $base-gradient !default;
       -webkit-box-shadow: rgba(#000,0.2) 0 .2em .2em;
     }
   }
-  
+
   .x-picker-slot-title {
     @include background-gradient($picker-title-bg-color, $picker-title-bg-gradient);
-    border-top: 1px solid $picker-title-bg-color;  
-    border-bottom: 1px solid darken($picker-title-bg-color, 20%);  
+    border-top: 1px solid $picker-title-bg-color;
+    border-bottom: 1px solid darken($picker-title-bg-color, 20%);
     font-weight: bold;
     font-size: 0.8em;
     color: $picker-title-color;
@@ -90,7 +90,7 @@ $picker-bar-gradient: $base-gradient !default;
       @include bevel-text('light');
     }
   }
-  
+
   .x-picker-item {
     vertical-align: middle;
     height: $picker-row-height;
@@ -101,7 +101,7 @@ $picker-bar-gradient: $base-gradient !default;
     overflow: hidden;
     white-space: nowrap;
   }
-  
+
   .x-picker-right {
       text-align: right;
   }

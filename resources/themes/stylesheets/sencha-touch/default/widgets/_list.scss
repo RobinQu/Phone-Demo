@@ -29,7 +29,7 @@ $list-disclosure-size: 1.7em;
       width: $list-disclosure-size;
       height: $list-disclosure-size;
     }
-    
+
     &.x-list-indexed .x-list-disclosure {
       margin-right: 2em;
     }
@@ -50,11 +50,11 @@ $list-disclosure-size: 1.7em;
 /*        padding: 0.3em;*/
         -webkit-box-flex: 1;
       }
-      
+
 /*      @if $include-list-highlights {
         border-top: 1px solid lighten($list-bg-color, 15%);
       }*/
-      
+
       span {
         font-size: .9em;
       }
@@ -63,15 +63,15 @@ $list-disclosure-size: 1.7em;
         @if $include-list-highlights {
           border-top-color: $list-pressed-color;
         }
-        
+
         background: $list-pressed-color none;
       }
-      
+
       &.x-item-selected {
         @include background-gradient($list-active-color, $list-active-gradient);
         @include color-by-background($list-active-color);
         @include bevel-by-background($list-active-color);
-        
+
         @if $include-list-highlights {
           border-top-color: lighten($list-active-color, 10%);
           border-bottom-color: darken($list-active-color, 15%);
@@ -79,11 +79,11 @@ $list-disclosure-size: 1.7em;
       }
     }
   }
-  
-  .x-list-header {   
+
+  .x-list-header {
     @include background-gradient($list-header-bg-color, $list-header-gradient);
-    border-top: 1px solid $list-header-bg-color;  
-    border-bottom: 1px solid darken($list-header-bg-color, 20%);  
+    border-top: 1px solid $list-header-bg-color;
+    border-bottom: 1px solid darken($list-header-bg-color, 20%);
     font-weight: bold;
     font-size: 0.8em;
     color: $list-header-color;
@@ -93,7 +93,7 @@ $list-disclosure-size: 1.7em;
       -webkit-box-shadow: 0px .1em .3em rgba(0, 0, 0, 0.3);
     }
   }
-  
+
   .x-list-header-swap {
     z-index: 1;
     position: absolute;
@@ -102,14 +102,14 @@ $list-disclosure-size: 1.7em;
     left: 0;
     width: 100%;
   }
-  
+
   .x-android .x-list-header-swap {
     -webkit-transform: translate(0px, 0px);
   }
-  
+
   .x-list-round {
     background-color: darken($list-bg-color, 5%);
-    .x-list-group-items > *, 
+    .x-list-group-items > *,
     &.x-list-flat .x-list-parent > * {
       border-right: 1px solid darken($list-bg-color, 15%);
       border-left: 1px solid darken($list-bg-color, 15%);
@@ -127,5 +127,5 @@ $list-disclosure-size: 1.7em;
       }
     }
   }
-  
+
 }

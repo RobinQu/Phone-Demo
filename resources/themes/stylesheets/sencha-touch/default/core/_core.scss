@@ -135,11 +135,11 @@ input, textarea {
   @include box-align(center);
   @include box-pack(center);
   background: rgba(0,0,0,.3) center center no-repeat;
-  
+
   &.x-mask-gray {
     background-color: rgba(0, 0, 0, 0.5);
   }
-  
+
   .x-mask-loading {
     @include display-box;
     @include box-orient(vertical);
@@ -155,7 +155,7 @@ input, textarea {
     height: 8.5em;
     background: rgba(0, 0, 0, .25);
   }
-  
+
   .x-loading-msg {
     font-size: .95em;
     @include bevel-text;

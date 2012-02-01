@@ -64,7 +64,7 @@ Ext.regController("contact", {
             //update action is called in a editing mode
             form.updateRecord(list.getSelectedRecords()[0], false);
         }
-        
+
         Ext.dispatch({
             controller: "contacts",
             action: "hideOverlay"

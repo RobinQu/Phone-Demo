@@ -3,7 +3,7 @@ describe("The tweets controller", function() {
 
     describe("the search action", function() {
         beforeEach(function() {
-            
+
         });
     });
 

@@ -7,7 +7,7 @@ $panel-border-radius: .3em;
   .x-panel-body {
     position: relative;
   }
-  
+
   @if $include-floating {
     .x-floating.x-panel, .x-floating.x-carousel {
       padding: 6px;
@@ -32,7 +32,7 @@ $panel-border-radius: .3em;
       width: $anchor-width;
       height: $anchor-height;
       position: absolute;
-      z-index: 1;    
+      z-index: 1;
       -webkit-mask: 0 0 theme_image($theme-name, "tip_horizontal.png") no-repeat;
       -webkit-mask-size: $anchor-width $anchor-height;
       overflow: hidden;

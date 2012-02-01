@@ -11,9 +11,9 @@ Ext.regController("contacts", {
             view = this.contactBuilder;
             box = this.box;
         }
-        
+
         view.down("contactbuilder").reset();
-        
+
         box.setActiveItem(3, {
             type: "slide",
             direction: "left"
@@ -59,7 +59,7 @@ Ext.regController("contacts", {
         if(this._selectedModel) {
             this._selectedModel.deselectAll();
         }
-        
+
         this.box.setActiveItem(0, {
             type: "slide",
             direction: "right"

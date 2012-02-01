@@ -3,15 +3,15 @@ phone.views.ContactBuilder = Ext.extend(Ext.Panel, {
     fullscreen: true,
     reset: function() {
         console.log("reset");
-        
+
         this.removeAll();
-        
+
         this.add([{
             xtype: "form",
             defaults: {
-              xtype: "fieldset"  
+              xtype: "fieldset"
             },
-            items: [{                
+            items: [{
               items: {
                   xtype: 'textfield',
                   name: 'name',
@@ -31,7 +31,7 @@ phone.views.ContactBuilder = Ext.extend(Ext.Panel, {
                 handler: phone.controllers.contact.appendInfo
             }]
         }]);
-        
+
         this.doLayout();
     }
 });

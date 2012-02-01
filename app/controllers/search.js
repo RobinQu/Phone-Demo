@@ -3,7 +3,7 @@ Ext.regController("search", {
     onFilter: function(value) {
         var view = Ext.getCmp("contacts-list"),
             store = Ext.getStore("Contacts");
-        // 
+        //
         // Ext.iterate(values, function(field, value) {
         //     filters.push(new Ext.util.Filter({
         //         property: field,
