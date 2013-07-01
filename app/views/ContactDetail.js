@@ -2,7 +2,7 @@
 phone.views.ContactDetail = Ext.extend(Ext.Panel, {
     fullscreen: true,
     cls: "contact-detail",
-    
+
     initComponent: function() {
         Ext.apply(this, {
             items: [
@@ -10,34 +10,34 @@ phone.views.ContactDetail = Ext.extend(Ext.Panel, {
                 this.getActionsBar()
             ]
         });
-        
+
         phone.views.ContactDetail.superclass.initComponent.apply(this, arguments);
     },
-    
+
     setContact: function(cotnact) {
         this.instance = cotnact;
-        
+
         if(this.rendered) {
             this.updateCard();
         } else {
             this.on("show", this.updateCard, this);
         }
-        
+
     },
-    
+
     updateCard: function() {
         var detailCard = this.down("#detailCard"),
             contact = this.instance;
-            
+
         detailCard.update(contact.data);
-        
+
     },
-    
+
     getActionsBar: function() {
         return {
             layout: {
               type: "hbox",
-              align: "center"  
+              align: "center"
             },
             defaults: {
               xtype: "button",
@@ -50,7 +50,7 @@ phone.views.ContactDetail = Ext.extend(Ext.Panel, {
             }]
         };
     },
-    
+
     getDetailsCard: function() {
         return new Ext.Component({
             tpl: new Ext.XTemplate(
@@ -66,7 +66,7 @@ phone.views.ContactDetail = Ext.extend(Ext.Panel, {
                 "</fieldset>",
                 "<fieldset>",
                     "<legend>铃声</legend>",
-                    "<p class='contact-text contact-ring'>{ring}</p>",                
+                    "<p class='contact-text contact-ring'>{ring}</p>",
                 "</fieldset>",
                 "<fieldset>",
                     "<legend>电子邮件</legend>",
@@ -88,7 +88,7 @@ phone.views.ContactDetail = Ext.extend(Ext.Panel, {
                 "<fieldset>",
                     "<legend>日期</legend>",
                     "<p class='contact-text contact-birth'>{[this.formatBirthday(values.birth)]}</p>",
-                "</fieldset>",                    
+                "</fieldset>",
                 "</form>",
             {
                 compiled: true,
@@ -107,8 +107,8 @@ phone.views.ContactDetail = Ext.extend(Ext.Panel, {
                 }
             }
         });
-        
-        
+
+
     }
 });
 

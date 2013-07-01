@@ -1,5 +1,5 @@
 /**
- * This file is included by your test/unit/index.html file and is used to apply settings before 
+ * This file is included by your test/unit/index.html file and is used to apply settings before
  * the tests are run.
  */
 

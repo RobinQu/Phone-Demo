@@ -48,7 +48,7 @@ phone.views.ContactsMain = Ext.extend(Ext.Carousel, {
         xtype: "overlayform",
         id: "contact-builder",
         mainView: "contactbuilder",
-        title: "Add Contact", 
+        title: "Add Contact",
         actionBtn: {
             xtype: "button",
             text: "Save",
@@ -56,7 +56,7 @@ phone.views.ContactsMain = Ext.extend(Ext.Carousel, {
             scope: phone.controllers.contact,
             handler: phone.controllers.contact.save
         }
-        
+
     }],
     listeners: {
         selectionchange: {

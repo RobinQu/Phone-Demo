@@ -15,7 +15,7 @@ $include-button-uis: $include-default-uis !default;
 $include-button-highlights: $include-highlights !default;
 
 @mixin sencha-buttons {
-  
+
   // Basic button style
   .x-button {
     @include background-clip(padding-box);
@@ -27,7 +27,7 @@ $include-button-highlights: $include-highlights !default;
     padding: .3em .6em;
     position: relative;
     overflow: hidden;
-    
+
     // Default icon style
     img {
       width: 2.1em;
@@ -42,12 +42,12 @@ $include-button-highlights: $include-highlights !default;
         -webkit-mask-size: 1.3em;
       }
     }
-    
+
     &.x-item-disabled .x-button-label, &.x-item-disabled img {
       opacity: .5;
     }
   }
-  
+
   .x-button-round {
     @include border-radius($button-height/2);
     padding: .1em $button-height/2;
@@ -57,7 +57,7 @@ $include-button-highlights: $include-highlights !default;
     @include border-radius(.3em);
     padding: .2em .4em;
     min-height: 0;
-    
+
     .x-button-label {
       font-size: .6em;
     }
@@ -67,7 +67,7 @@ $include-button-highlights: $include-highlights !default;
       height: .75em;
     }
   }
-  
+
   // Button icon alignment
   .x-iconalign-left, .x-icon-align-right {
     @include box-orient(horizontal);
@@ -88,7 +88,7 @@ $include-button-highlights: $include-highlights !default;
   .x-iconalign-right .x-button-label {
     margin-right: $toolbar-spacing * 1.5;
   }
-  
+
   // Button labels
   .x-button-label {
     @include box-flex(1);
@@ -101,7 +101,7 @@ $include-button-highlights: $include-highlights !default;
     display: block;
     overflow: hidden;
   }
-  
+
   // Toolbar button styling
   .x-toolbar .x-button {
     margin: 0 .2em;
@@ -111,7 +111,7 @@ $include-button-highlights: $include-highlights !default;
       font-size: .7em;
     }
   }
-  
+
   // Back/Forward buttons
   $shadow-width: .065em; // Space between tip and its shadow
   $overlap-width: .2em; // how far the mask is clipped
@@ -121,7 +121,7 @@ $include-button-highlights: $include-highlights !default;
   $mask-width: $mask-height/2.33;
 
   $mask-offset: $button-radius - $overlap-width - $button-stroke-weight + $shadow-width - .02em;
-  
+
   $tip-width: $mask-width - $mask-offset + $shadow-width;
 
   .x-button-forward, .x-button-back {
@@ -150,7 +150,7 @@ $include-button-highlights: $include-highlights !default;
   }
 
   .x-button-forward, .x-toolbar .x-button-forward {
-    margin-right: $tip-width - $shadow-width + $toolbar-spacing;      
+    margin-right: $tip-width - $shadow-width + $toolbar-spacing;
     padding-right: .4em;
     &:before, &:after {
       -webkit-mask: -$mask-offset 0 theme_image($theme-name, "tip_right.png") no-repeat;
@@ -174,22 +174,22 @@ $include-button-highlights: $include-highlights !default;
     text-shadow: none;
     height: auto;
     line-height: auto;
-  
+
     margin: -1.5em -.5em;
     padding: 1.3em 1em;
     height: 1.8em;
-  
+
     & > * {
       overflow: visible;
       margin-top: -.75em;
     }
-  
+
     img {
       -webkit-mask-size: $toolbar-icon-size;
       width: $toolbar-icon-size;
       height: $toolbar-icon-size;
     }
-  
+
     &.x-button-pressed {
       background: none;
       -webkit-box-shadow: none;
@@ -203,7 +203,7 @@ $include-button-highlights: $include-highlights !default;
       }
     }
   }
-  
+
   // SegmentedButtons
   .x-segmentedbutton .x-button {
     @include border-radius(0);
@@ -218,7 +218,7 @@ $include-button-highlights: $include-highlights !default;
       border-left: 0;
     }
   }
-  
+
   // Badges
   $badge-size: 2em !default;
   $badge-bg-color: darken($alert-color, 20%) !default;
@@ -253,7 +253,7 @@ $include-button-highlights: $include-highlights !default;
       display: inline-block;
     }
   }
-  
+
   @if $include-default-icons {
     @include pictos-iconmask('action');
     @include pictos-iconmask('add');
@@ -274,7 +274,7 @@ $include-button-highlights: $include-highlights !default;
     @include pictos-iconmask('locate');
     @include pictos-iconmask('home');
   }
-  
+
   @if $include-button-uis {
     @include sencha-button-ui('action', $active-color);
     @include sencha-button-ui('confirm', desaturate(darken($confirm-color, 10%), 5%));
@@ -286,11 +286,11 @@ $include-button-highlights: $include-highlights !default;
   .x-button.x-button-#{$ui-label}, .x-button.x-button-#{$ui-label}-round, .x-button.x-button-#{$ui-label}-small {
     @include toolbar-button($color, $gradient);
   }
-  
+
   .x-button.x-button-#{$ui-label}-round {
     @extend .x-button-round;
   }
-  
+
   .x-button.x-button-#{$ui-label}-small {
     @extend .x-button-small;
   }

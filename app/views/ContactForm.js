@@ -1,14 +1,14 @@
 /*global phone, Ext */
 phone.views.ContactForm = Ext.extend(Ext.form.FormPanel, {
     cls: "contact-form",
-    
+
     initComponent: function() {
         var config = {
             defaults: {
-              xtype: "fieldset"  
+              xtype: "fieldset"
             },
             items: [
-                    {                
+                    {
                       items: {
                           xtype: 'textfield',
                           name: 'name',
@@ -71,12 +71,12 @@ phone.views.ContactForm = Ext.extend(Ext.form.FormPanel, {
                     }
                 ]
         };
-        
+
         Ext.apply(this, config);
-        
+
         phone.views.ContactForm.superclass.initComponent.apply(this, arguments);
     }
-    
+
 });
 
 Ext.reg('contactform', phone.views.ContactForm);

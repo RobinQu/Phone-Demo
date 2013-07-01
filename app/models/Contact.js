@@ -15,7 +15,7 @@
      },
      {
        name: "sign",
-       type: "string"  
+       type: "string"
      },
      {
          name: 'avatar',

@@ -18,16 +18,16 @@ $index-bar-color: darken(desaturate($base-color, 5%), 15%) !default;
     bottom: 1em;
     z-index: 3;
   }
-  
+
   .x-indexbar-body {
     padding: .3em 0;
   }
-  
+
   .x-indexbar-pressed .x-indexbar-body {
     @include border-radius(($index-bar-width - .6em)/2);
     background-color: $index-bar-bg-color;
   }
-  
+
   .x-indexbar-item {
     color: $index-bar-color;
     font-size: 0.6em;

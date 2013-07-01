@@ -21,16 +21,16 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
 
 @mixin label {
   text-shadow: #fff 0 1px 1px;
-  color: $form-dark; 
+  color: $form-dark;
 }
 
 @mixin sencha-form($include-sliders: $include-form-sliders) {
-  
+
   .x-form .x-panel-body {
     padding: 1em;
     background-color: $form-bg-color;
   }
-  
+
   .x-input-el {
     min-height: $form-field-height;
     width: 100%;
@@ -38,19 +38,19 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
     background: $form-field-bg-color none;
     -webkit-appearance: none;
   }
-  
+
   .x-field {
     overflow: hidden;
     position: relative;
     min-height: $form-field-height;
     border-bottom: 1px solid $form-light;
-    
+
     // .x-input-text {
     //   white-space: nowrap;
     //   text-overflow: ellipsis;
     //   overflow: hidden;
     // }
-    
+
     input, textarea, select, .x-field-slider {
       @extend .x-input-el;
       @include border-radius(0);
@@ -58,15 +58,15 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
       border: 0;
     }
   }
-  
+
   .x-field:last-child {
     border-bottom: 0;
   }
-  
+
   .x-field-mask {
     @include stretch;
   }
-  
+
   #{$form-scrollable-fields} {
     .x-field-mask {
       @extend .x-hidden-display;
@@ -80,7 +80,7 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
   }
 
   .x-form-fieldset {
-    
+
     margin: 1em 0 1.5em;
     .x-panel-body {
       border: 1px solid $form-light;
@@ -92,14 +92,14 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
       overflow: hidden;
     }
   }
-  
+
   .x-form-fieldset-title {
     @include label;
     margin: 1em ( $form-spacing + .1em ) .3em;
     color: $form-dark;
     font-weight: bold;
   }
-  
+
   .x-form-fieldset-instructions {
     @include label;
     color: lighten($form-dark, 30%);
@@ -107,7 +107,7 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
     font-size: .8em;
     text-align: center;
   }
-  
+
   .x-form-label {
     @include label;
     @include bevel-text('light');
@@ -127,24 +127,24 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
     width: 100%;
     position: relative;
   }
-  
+
   .x-field {
     @include display-box;
   }
-  
+
   #{$form-input-fields} {
     @include box-flex(1);
   }
-  
+
   .x-label-align-left, .x-label-align-right {
     @include box-orient(horizontal);
     @include box-align(stretch);
-    
+
 //    .x-form-label {
 //      width: $form-label-width;
 //    }
   }
-  
+
   // Round the corners on fieldsets.
   // Warning: It ain't pretty
 
@@ -170,7 +170,7 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
     @include box-direction(reverse);
     @include box-pack(end);
   }
-  
+
   .x-form-fieldset .x-label-align-right {
     &:first-child {
       .x-form-label {
@@ -189,16 +189,16 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
       }
     }
   }
-  
+
   .x-label-align-top, .x-label-align-bottom {
     @include box-orient(vertical);
   }
   .x-label-align-bottom {
     @include box-direction(reverse);
   }
-  
+
   // Required fields
-  
+
   .x-field-required {
     label:after, .x-form-label:after {
       content: "*";
@@ -212,7 +212,7 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
   // Create the dropdown arrow
   // for select fields
   .x-field-select {
-    
+
     // Tip
     &:after {
       @include insertion(0,0,0,auto);
@@ -234,20 +234,20 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
       bottom: 0;
     }
   }
-  
+
   .x-item-disabled {
     .x-form-label span, input, .x-spinner-body, select, textarea, .x-field-clear-container {
       color: lighten($form-dark, 50%);
     }
   }
-  
+
   .x-field-textarea {
     textarea {
       min-height: $form-textarea-height;
       padding-top: .5em;
     }
   }
-  
+
   .x-field .x-input-radio, .x-field .x-input-checkbox {
     &:after {
       @include insertion(1.3em, 1.3em, .8em, auto);
@@ -257,12 +257,12 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
       -webkit-mask-size: 1.3em 1.1em;
       @include background-gradient($form-light, 'flat');
     }
-    
+
     &:checked:after {
       @include background-gradient($active-color, 'flat');
     }
   }
-  
+
   .x-label-align-right .x-input-radio:after, .x-label-align-right .x-input-checkbox:after {
     right: auto;
     left: $form-spacing;
@@ -272,18 +272,18 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
   .x-spinner {
     border-bottom: 1px solid $form-light;
   }
-  
+
   .x-spinner .x-spinner-body {
     @include display-box;
     @include box-direction(normal);
   }
-  
+
   .x-spinner-body {
     @include box-orient(horizontal);
     @include box-align(stretch);
     width: 100%;
     text-align: center;
-    
+
     span {
       font-size: 1.3em;
       font-weight: bold;
@@ -345,7 +345,7 @@ $form-scrollable-fields: '.x-field-slider, .x-field-toggle, .x-field-checkbox, .
     text-align: center;
     padding: 0 .27em;
   }
-  
+
   .x-field-clearable input.x-field-clearable {
     padding-right: $form-clear-size + $form-spacing;
   }
